@@ -1,0 +1,126 @@
+:root{
+  --bg:#f4f7f8;
+  --accent:#16a085;
+  --dark:#2c3e50;
+  --muted:#bdc3c7;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background:var(--bg);
+  color:var(--dark);
+  text-align:center;
+}
+
+header{
+  background:linear-gradient(90deg,#16a085,#27ae60);
+  color:white;
+  padding:18px 12px;
+}
+header h1{margin:0;font-size:20px}
+header p{margin:6px 0 0;font-size:13px;opacity:0.95}
+
+#top-controls{
+  padding:12px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  max-width:1100px;
+  margin:0 auto;
+}
+
+.left-row, .right-row{
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+
+/* inputs & selects */
+input#cityName{
+  padding:8px 12px;
+  border-radius:10px;
+  border:2px solid #2c3e50;
+  width:220px;
+  outline:none;
+}
+select{
+  padding:8px 10px;border-radius:8px;border:1px solid #ccc;
+}
+
+/* buttons */
+.btn{
+  padding:9px 12px;
+  border-radius:10px;
+  border:none;
+  cursor:pointer;
+  background:#2ecc71;
+  color:white;
+  font-weight:600;
+  box-shadow:0 6px 12px rgba(0,0,0,0.06);
+  transition:transform .08s ease,opacity .12s;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.danger{background:#e74c3c}
+.btn.toggle{background:#1abc9c}
+.btn:active{transform:translateY(0)}
+
+main{padding:12px}
+
+#canvas-wrap{
+  display:flex;
+  justify-content:center;
+  margin:6px 0 12px;
+}
+
+canvas{
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  background:linear-gradient(180deg,#eef4f5,#f7fbfc);
+  border:3px solid #2c3e50;
+}
+
+#controls-bottom{
+  margin-top:12px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  align-items:center;
+}
+
+.algo-btns-centered{display:flex;gap:18px;align-items:center}
+.big-btn{
+  padding:12px 20px;
+  border-radius:18px;
+  font-size:16px;
+  font-weight:700;
+  color:white;
+  border:none;
+  cursor:pointer;
+  box-shadow:0 8px 18px rgba(0,0,0,0.08);
+}
+.big-btn.orange{background:linear-gradient(90deg,#f39c12,#e67e22)}
+.big-btn.blue{background:linear-gradient(90deg,#3498db,#2980b9)}
+
+#result{
+  margin-top:14px;
+  font-weight:700;
+  color:var(--dark);
+}
+
+footer{
+  margin-top:24px;
+  padding:10px;
+  background:#2c3e50;color:white;
+  font-size:13px;
+}
+
+/* responsive */
+@media (max-width:900px){
+  #top-controls{flex-direction:column;align-items:stretch}
+  .right-row{justify-content:flex-start}
+  .left-row{justify-content:flex-start}
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mô phỏng đường ngắn nhất - Người bán hàng</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🗺️ Mô phỏng đường đi ngắn nhất</h1>
+    <p>Click để thêm thành phố. Bật <strong>Vẽ bản đồ</strong> rồi click 2 thành phố để nối.</p>
+  </header>
+
+  <section id="top-controls">
+    <div class="left-row">
+      <input id="cityName" placeholder="Nhập tên thành phố (VD: 1)" />
+      <button id="addCityBtn" class="btn">➕ Thêm thành phố</button>
+      <button id="drawModeBtn" class="btn toggle">✏️ Vẽ bản đồ</button>
+      <button id="delLinkModeBtn" class="btn toggle">🗑️ Xóa nối</button>
+      <button id="clearAllBtn" class="btn danger">🗑️ Xóa tất cả</button>
+    </div>
+
+    <div class="right-row">
+      <label>Từ:</label>
+      <select id="fromSelect"></select>
+      <label>Đến:</label>
+      <select id="toSelect"></select>
+     
+    </div>
+  </section>
+
+  <main>
+    <div id="canvas-wrap">
+      <canvas id="cityMap" width="1000" height="600"></canvas>
+    </div>
+
+    <div id="controls-bottom">
+      <div class="algo-btns-centered">
+        <button id="greedyBtn" class="big-btn orange">🚦 Thuật toán Tham lam</button>
+        <button id="optimalBtn" class="big-btn blue">💡 Thuật toán Tối ưu</button>
+      </div>
+    </div>
+
+    <div id="result" aria-live="polite"></div>
+  </main>
+
+  <footer>© 2025 - Mô phỏng | Nhóm 3CB </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
